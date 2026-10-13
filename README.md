@@ -219,6 +219,15 @@ python main.py 1094408                 # 三正交切片联动 + 三维骨骼等
 
 或直接双击打包好的 `CBCTViewer.exe`（需与 `data/` 同目录）。
 
+### 7.4 编译 C++ 版（可选）
+
+```bash
+cd cuda
+build.bat          # 需 VS Build Tools 2022(C++桌面开发) + CUDA Toolkit 12.1
+```
+
+生成 `fdk.exe`，与 `fdk_cuda.py` 算法等价（已验证逐位一致 corr=1.0）。
+
 ---
 
 ## 八、目录结构
