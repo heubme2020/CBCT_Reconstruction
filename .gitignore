@@ -1,0 +1,17 @@
+# 数据(体数据/投影中间产物, 体积大, 不入库)
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller 打包产物
+CBCTViewer.exe
+app/dist/
+app/build/
+*.spec
+
+# 临时/系统
+.DS_Store
+Thumbs.db
