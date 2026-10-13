@@ -68,7 +68,7 @@ input[type=range] {{ width: 100%; margin-top: 6px; }}
 <body>
 <header>
   <h1>CBCT 三维重建结果查看器 — 检查 {ts}</h1>
-  <p>上排：重建体数据；下排：厂商 ground truth。拖动滑块浏览各层切片。</p>
+  <p>上排：重建体数据；下排：设备方 ground truth。拖动滑块浏览各层切片。</p>
 </header>
 <div class="grid">
   <div class="cell"><canvas id="ax0" width="{N}" height="{N}"></canvas><div class="cap">轴向 重建</div></div>

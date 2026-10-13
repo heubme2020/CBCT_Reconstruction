@@ -24,8 +24,9 @@ PROJECT_DIR = os.path.dirname(RECON_PY)                     # CBCT/recon
 DATA_ROOT = os.path.join(os.path.dirname(PROJECT_DIR), '100000027')  # CBCT/100000027
 DATA_OUT = os.path.join(PROJECT_DIR, 'data')                # CBCT/recon/data
 
-# 文件名前缀: 1.2.168.2101.441.<accession>.<date>.<timestamp>
-PREFIX = '1.2.168.2101.441.100000027.20231018'
+# 文件名前缀: <机构UID>.<accession>.<date>.<timestamp>
+# 机构 UID 前缀已脱敏, 请按实际数据文件名替换
+PREFIX = '<机构UID>.100000027.20231018'
 
 # 4 组原始投影序列(时间戳 -> 帧数)
 SERIES = {

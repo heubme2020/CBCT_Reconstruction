@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """读取现成体数据卷 _3D.raw → gt.bin (float32) + 统计。
 
-这是厂商已重建好的 ground truth, 用于几何反推与定量验证。
+这是设备方已重建好的 ground truth, 用于几何反推与定量验证。
 
 用法:
     python read_groundtruth.py [时间戳]     # 默认 1094408
