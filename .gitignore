@@ -12,6 +12,9 @@ app/dist/
 app/build/
 *.spec
 
+# CUDA C++ 编译产物
+cuda/fdk.exe
+
 # 临时/系统
 .DS_Store
 Thumbs.db

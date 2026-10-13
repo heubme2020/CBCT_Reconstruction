@@ -138,7 +138,7 @@ min ‖f‖_TV   s.t.  ‖Pf − g‖ ≤ ε,  f ≥ 0
                     (corr/Dice) (3D Slicer)  (PyQt5+VTK / HTML)
 ```
 
-**计算后端**：CUDA（numba.cuda 的 NVVM JIT，反投影在 GPU 上并行，~100× 加速；本机无 MSVC，故用 numba.cuda 而非 nvcc C++，C++ 版见 `cuda/fdk.cu`）。
+**计算后端**：CUDA（反投影在 GPU 上并行，~100× 加速）。两条等价实现：`fdk_cuda.py`（numba.cuda 的 NVVM JIT）+ `cuda/fdk.cu`（nvcc C++，已用 MSVC 编译验证，与 numba 版结果逐位一致 corr=1.0）。
 
 **几何正确性保证**：CPU 参考实现（`fdk_ref.py`）与 CUDA 实现逐位一致（corr=1.0）；球体体模自洽重建 corr=0.96、GT 前向投影自洽 corr=0.91，证明前向/反投影算子与几何标定正确。
 
@@ -241,7 +241,7 @@ recon/
 │   └── run_all.py         一键编排
 ├── app/                   桌面软件
 │   └── main.py            PyQt5 + VTK 三维查看器
-├── cuda/                  C++ 版（nvcc，需 MSVC）
+├── cuda/                  C++ 版（nvcc，已编译验证）
 │   └── fdk.cu
 └── data/                  运行时产物（不入库）
 ```
